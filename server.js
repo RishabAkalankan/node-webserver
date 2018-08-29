@@ -53,6 +53,12 @@ app.get('/pricing', (request, response) => {
     });
 });
 
+app.get('/projects',(request, response) => {
+    response.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+    })
+})
+
 app.get('/**', (request, response)=> {
     response.send({
         errorMessage: 'Unable to parse the request'
